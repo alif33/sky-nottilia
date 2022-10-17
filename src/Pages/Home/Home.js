@@ -5,6 +5,7 @@ import Features from "./Features";
 import Pricing from "./Pricing";
 import SpecialFeature from "./SpecialFeature";
 import Subscribe from "./Subscribe";
+import Testimonials from "./Testimonials";
 import WhatNext from "./whatNext";
 
 const Home = () => {
@@ -16,7 +17,8 @@ const Home = () => {
       <SpecialFeature />
       <Pricing />
       <Faq />
-      <Subscribe/>
+      <Testimonials />
+      <Subscribe />
     </div>
   );
 };
