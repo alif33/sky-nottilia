@@ -4,7 +4,10 @@ import PDF from "../../assets/img/PDF.png";
 import iconCalculat from "../../assets/img/icon-calculat.png";
 const SpecialFeature = () => {
   return (
-    <div className="flex justify-between items-stretch mx-5 py-16">
+    <div className="flex justify-between items-start mx-5 py-16">
+      <div className="">
+        <img src={feature} alt="" />
+      </div>
       <div>
         <p className="uppercase text-[#7C5CFC]">Special feature</p>
         <h2 className="text-[#152C5B] font-bold text-5xl my-5">
@@ -17,7 +20,7 @@ const SpecialFeature = () => {
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit
         </p>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-start items-start gap-[53px]">
           <div>
             <p>
               <span className="">
@@ -48,9 +51,6 @@ const SpecialFeature = () => {
         <button className="bg-[#FA9D4C] w-[166px] h-[56px] border-none px-[40px] py-[18px] rounded-[14px] text-white text-sm mt-10">
           Learn More
         </button>
-      </div>
-      <div className="">
-        <img src={feature} alt="" />
       </div>
     </div>
   );

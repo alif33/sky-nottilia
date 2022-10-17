@@ -5,7 +5,7 @@ import Home from "./Pages/Home/Home";
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-[#E5E3E3]">
       <Home />
     </div>
   );
