@@ -1,0 +1,8 @@
+.backgroundImg{
+    background-image: url(../../assets/img/backgroundImgBanner.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:1018.5px;
+    width: 100%;
+}

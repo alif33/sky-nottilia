@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "./Banner";
 import Faq from "./Faq";
 import Features from "./Features";
+import Footer from "./Footer";
 import Pricing from "./Pricing";
 import SpecialFeature from "./SpecialFeature";
 import Subscribe from "./Subscribe";
@@ -10,7 +11,7 @@ import WhatNext from "./whatNext";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-[#E5E3E3]">
       <Banner />
       <Features />
       <WhatNext />
@@ -19,6 +20,7 @@ const Home = () => {
       <Faq />
       <Testimonials />
       <Subscribe />
+      <Footer />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import featureImg2 from "../../assets/img/Icon Line Chart.png";
 import featureImg3 from "../../assets/img/Icon_Workflow.png";
 import featureImg4 from "../../assets/img/Icon_Protection.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
+
 const Features = () => {
   const featureItems = [
     {
@@ -33,7 +34,7 @@ const Features = () => {
     },
   ];
   return (
-    <div className="my-10">
+    <div className="mb-10 lg:mt-[-200px]">
       <h6 className="uppercase text-center text-[#7C5CFC]">features</h6>
       <p className="text-5xl text-center my-5 font-bold">
         Managing Social media{" "}
@@ -46,7 +47,7 @@ const Features = () => {
           data visualizations and insightful dashboards in minutes.
         </span>
       </p>
-      <div className="grid grid-cols-4 grid-cols-sm-1 gap-4 mt-20">
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 mt-20">
         {featureItems.map((featureItem) => (
           <div key={featureItem._id} className="text-center">
             <div className="flex justify-center">

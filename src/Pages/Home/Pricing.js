@@ -22,8 +22,8 @@ const Pricing = () => {
         <p className="font-normal text-[#323232]">Annualy</p>
       </div>
       {/* Pricing card */}
-      <div className="flex justify-around items-center">
-        <div className="grid grid-cols-3 gap-56 my-16">
+      <div className="flex justify-around items-center lg:mx-28">
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-48 gap-16 my-16">
           <div className="w-[360px] h-[606px] border-[1px] border-[#d4cfcf] rounded-[14px] p-8 hover:shadow-3xl hover:bg-white hover:border-white">
             <p className="text-5xl text-[#7B5BF9]">
               6$
