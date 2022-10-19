@@ -1,4 +1,4 @@
-<div className="w-[780px] h-[680px] bg-gradient-to-r from-[#F9D6FF] to-[#7892ED] rounded-lg hidden lg:visible lg:block">
+{/* <div className="w-[780px] h-[680px] bg-gradient-to-r from-[#F9D6FF] to-[#7892ED] rounded-lg hidden lg:visible lg:block">
 <div>
   <div className="flex justify-center items-center gap-3 pt-[60px]">
     <img src={logo} alt="" />
@@ -101,5 +101,31 @@
       tracking and easier budgeting with.
     </span>
   </p>
+</div>
+</div> */}
+
+
+
+
+<div className="main-tile absolute flex justify-around items-center flex-wrap gap-5">
+<div className="tile w-[303px] h-[109px] rounded-[10px] shadow-xl">
+  {/* <IoIosRadioButtonOff className="" /> */}
+  <input
+    className={``}
+    type="checkbox"
+    name="celebraty"
+    id="celebraty"
+  />
+  <label className="mb-[10px]" htmlFor="celebraty" for="celebraty">
+    <img className="checkboxImg" src={Celebraty} alt="" />
+    <h6>Celebraty</h6>
+  </label>
+</div>
+<div className="tile w-[303px] h-[109px] rounded-[10px] shadow-xl">
+  <input className="" type="checkbox" name="code" id="code" />
+  <label className="mb-[10px]" for="code" htmlFor="code">
+    <img className="checkboxImg" src={Developer} alt="" />
+    <h6>Code</h6>
+  </label>
 </div>
 </div>

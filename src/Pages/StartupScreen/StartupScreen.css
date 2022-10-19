@@ -1,0 +1,70 @@
+.main-tile{
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 60%;
+    
+}
+
+.tile{
+    position: relative;
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #ffff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    outline: none;
+    box-shadow: 15px 15px 25px rgba(2, 28, 53, 0.05)
+}
+
+input[type="checkbox"]:after{
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: url('../../assets/img/icon/Ellipse 2815.png');
+    font-size: 22px;
+    top: 5px;
+    left: 270px;
+    color: #e2e6f3;
+
+}
+/* input[type="checkbox"]:hover{
+    transform: scale(1.08);
+} */
+
+input[type="checkbox"]:checked{
+    border: 2px solid #7C5CFC;
+}
+
+input[type="checkbox"]:checked:after{
+    content: "\f058";
+    color: #04CE00;
+}
+
+label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+
+input[type="checkbox"]:checked + label {
+    animation: grow 0.5s;
+}
+@keyframes grow {
+    50%{
+        font-size: 20px;
+    }
+}
