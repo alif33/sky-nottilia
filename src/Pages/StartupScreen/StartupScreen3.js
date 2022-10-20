@@ -26,7 +26,7 @@ import whatsapp from "../../assets/img/icon/StartupScreen3/whatsapp.png";
 import dropbox from "../../assets/img/icon/StartupScreen3/dropbox.png";
 import twitter from "../../assets/img/icon/StartupScreen3/twitter.png";
 
-// import "./StartupScreen3.css";
+import "./StartupScreen3.css";
 
 const StartupScreen3 = () => {
   const startupScreenDatas = [
@@ -191,10 +191,13 @@ const StartupScreen3 = () => {
         </div>
 
         <div className="flex justify-center items-center my-10">
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-8 gap-6">
             {appDatas.map((appData) => (
               <div key={appData._id}>
-                <div className="tile w-[303px] h-[109px] rounded-[10px] shadow-xl">
+                <div
+                  id="_tile3"
+                  className="w-[75px] h-[75px] rounded-[10px] bg-[#E2E2E2] relative"
+                >
                   {/* <IoIosRadioButtonOff className="" /> */}
                   <input
                     className={``}
@@ -203,7 +206,7 @@ const StartupScreen3 = () => {
                     id={appData.for}
                   />
                   <label
-                    className="mb-[10px]"
+                    className="mb-[10px] flex justify-center items-center gap-[20px] h-[80%] w-[100%] absolute cursor-pointer"
                     htmlFor={`${appData.for}`}
                     for={appData.for}
                   >

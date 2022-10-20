@@ -12,7 +12,7 @@ import CheckCircle from "../../assets/img/CheckCircle.png";
 import gmail from "../../assets/img/gmail.png";
 import greenDot from "../../assets/img/Ellipse 2816.png";
 import Modern3d from "../../assets/img/Modern-3d-illustration-of-Seo-optimization-concept 1.png";
-import "./StartupScreen.css";
+// import "./StartupScreen.css";
 import { IoIosRadioButtonOff } from "react-icons/io";
 
 const StartupScreen4 = () => {

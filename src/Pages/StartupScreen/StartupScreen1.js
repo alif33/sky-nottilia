@@ -9,7 +9,7 @@ import Celebraty from "../../assets/img/icon/Sparkle.png";
 import Enterprise from "../../assets/img/icon/UsersThree.png";
 import Entreprenure from "../../assets/img/icon/LightbulbFilament.png";
 import Developer from "../../assets/img/icon/Code.png";
-import "./StartupScreen.css";
+import "./StartupScreen1.css";
 import { IoIosRadioButtonOff } from "react-icons/io";
 const StartupScreen1 = () => {
   const startupScreenDatas = [
@@ -94,7 +94,10 @@ const StartupScreen1 = () => {
           <div className="grid grid-cols-3 gap-6">
             {startupScreenDatas.map((startupScreenData) => (
               <div key={startupScreenData._id}>
-                <div className="tile w-[303px] h-[109px] rounded-[10px] shadow-xl">
+                <div
+                  id="_tile"
+                  className="tile w-[303px] h-[109px] rounded-[10px] shadow-xl"
+                >
                   {/* <IoIosRadioButtonOff className="" /> */}
                   <input
                     className={``}
@@ -103,7 +106,7 @@ const StartupScreen1 = () => {
                     id={startupScreenData.for}
                   />
                   <label
-                    className="mb-[10px]"
+                    className="mb-[10px] flex justify-center items-center gap-[20px] h-3/4 w-[100%] absolute cursor-pointer"
                     htmlFor={`${startupScreenData.for}`}
                     for={startupScreenData.for}
                   >
