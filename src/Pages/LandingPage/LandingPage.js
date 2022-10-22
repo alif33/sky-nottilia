@@ -27,17 +27,20 @@ import Group427320608 from "../../assets/img/Group 427320608.png";
 import DotsThreeVertical from "../../assets/img/DotsThreeVertical.png";
 
 const LandingPage = () => {
+  const handleHistory = () => {
+    console.log("handleHistory");
+  };
   return (
     <div className="drawer drawer-mobile ">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col overflow-ellipsis">
+      <div className="drawer-content flex flex-col h-[200px] overflow-ellipsis">
         {/* <!-- Page content here --> */}
         <div className="flex justify-end">
           <label htmlFor="my-drawer-2" className=" drawer-button lg:hidden">
             {/* <HiMenu className="h-7 w-7" /> */}
           </label>
         </div>
-        <div className="flex justify-between bg-[#191919] py-4 px-2 h-[200px] sticky top-0 z-50">
+        <div className="flex justify-between items-center bg-[#191919] py-4 px-2  sticky top-0 z-50">
           <div className="flex justify-center items-center gap-3 mx-3 pr-[38px]">
             <img className="cursor-pointer" src={ArrowLeft} alt="" srcset="" />
             <img className="cursor-pointer" src={ArrowRight} alt="" srcset="" />
@@ -79,21 +82,27 @@ const LandingPage = () => {
           <div className="flex flex-col justify-center items-center mt-4">
             <img src={logo} alt="" srcset="" />
           </div>
-          <div className="flex flex-col justify-center items-center gap-3">
-            <img className="" src={telegram} alt="" srcset="" />
-            <img className="" src={fb} alt="" srcset="" />
-            <img className="" src={twitter} alt="" srcset="" />
-            <img className="" src={slack} alt="" srcset="" />
-            <img className="" src={whatsapp} alt="" srcset="" />
-            <img className="" src={dropbox} alt="" srcset="" />
-            <img className="mt-2 w-[22px]" src={plus} alt="" srcset="" />
+          <div className="flex flex-col justify-center items-center gap-4">
+            <img className="w-[70%]" src={telegram} alt="" srcset="" />
+            <img className="w-[70%]" src={fb} alt="" srcset="" />
+            <img className="w-[70%]" src={twitter} alt="" srcset="" />
+            <img className="w-[70%]" src={slack} alt="" srcset="" />
+            <img className="w-[70%]" src={whatsapp} alt="" srcset="" />
+            <img className="w-[70%]" src={dropbox} alt="" srcset="" />
+            <img className="mt-2 w-[20px]" src={plus} alt="" srcset="" />
           </div>
-          <div className="flex flex-col justify-end items-center gap-6 pb-[-50px]">
-            <img src={history} alt="" srcset="" />
-            <img className="" src={message} alt="" srcset="" />
-            <img className="" src={ChartLineUp} alt="" srcset="" />
-            <img className="" src={Gear} alt="" srcset="" />
-            <img className="" src={people} alt="" srcset="" />
+          <div className="flex flex-col justify-end items-center gap-5 pb-[-50px]">
+            <img
+              onClick={handleHistory}
+              className="w-[90%] "
+              src={history}
+              alt=""
+              srcset=""
+            />
+            <img className="w-[90%] " src={message} alt="" srcset="" />
+            <img className="w-[90%] " src={ChartLineUp} alt="" srcset="" />
+            <img className="w-[90%] " src={Gear} alt="" srcset="" />
+            <img className="w-[90%] " src={people} alt="" srcset="" />
           </div>
         </div>
         <ul className="menu  overflow-y-auto w-[111px] bg-[#191919] text-base-content">

@@ -1,0 +1,8 @@
+.backgroundLandingPage1Img{
+    background-image: url(../../assets/img/pexels-travis-blessing-1363876.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
