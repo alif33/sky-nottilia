@@ -101,7 +101,9 @@ const LandingPage = () => {
             />
             <img className="w-[90%] " src={message} alt="" srcset="" />
             <img className="w-[90%] " src={ChartLineUp} alt="" srcset="" />
-            <img className="w-[90%] " src={Gear} alt="" srcset="" />
+            <Link to="/landing-page/setting">
+              <img className="w-[90%] " src={Gear} alt="" srcset="" />
+            </Link>
             <img className="w-[90%] " src={people} alt="" srcset="" />
           </div>
         </div>

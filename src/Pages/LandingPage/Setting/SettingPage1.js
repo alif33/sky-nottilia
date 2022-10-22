@@ -9,6 +9,7 @@ import profileAdd from "../../../assets/img/profile-add.svg";
 import emptyWallet from "../../../assets/img/empty-wallet.svg";
 import verify from "../../../assets/img/verify.png";
 import gallery from "../../../assets/img/gallery.png";
+import { Link, Outlet } from "react-router-dom";
 const SettingPage1 = () => {
   const accountApps = [
     {
@@ -38,7 +39,7 @@ const SettingPage1 = () => {
     },
   ];
   return (
-    <div className="bg-[#131517] h-screen pl-[52px]">
+    <div className="bg-[#131517] h-max pb-[150px] pl-[52px]">
       <div className="flex justify-between items-center mx-3 my-3 ">
         <div className="w-[426.83px] h-[51.22px] bg-[#1E1F25] text-white flex items-center justify-start rounded-2xl px-2">
           <img src={MagnifyingGlass} alt="" srcset="" />
@@ -64,29 +65,94 @@ const SettingPage1 = () => {
       <div className="flex">
         <div className="w-[290px]">
           <ul>
-            <li className="flex gap-4 ml-3 my-3">
-              <img src={menu} alt="" srcset="" />
-              <p className="text-white">Menu</p>
+            <li className=" ml-3 my-3">
+              <Link to="/landing-page/setting">
+                {" "}
+                <div className="flex gap-4">
+                  <img src={menu} alt="" srcset="" />
+                  <p className="text-white">Menu</p>
+                </div>
+              </Link>
+
+              <ul>
+                <li className=" ml-3 my-3">
+                  <Link to="/landing-page/setting/menu">
+                    <p className="text-white font-extralight opacity-40">
+                      Overview
+                    </p>
+                  </Link>
+                </li>
+                <li className=" ml-3 my-3">
+                  <Link
+                    className=""
+                    to="/landing-page/setting/menu/sign-in-method"
+                  >
+                    <p className="text-white font-extralight opacity-40">
+                      Sign in method
+                    </p>
+                  </Link>
+                </li>
+                <li className="ml-3 my-3">
+                  <Link to="/landing-page/setting/menu/basic-information">
+                    <p className="text-white font-extralight opacity-40">
+                      Basic Information
+                    </p>
+                  </Link>
+                </li>
+                <li className="ml-3 my-3">
+                  <Link to="/landing-page/setting/menu/connected-account">
+                    <p className="text-white font-extralight opacity-40">
+                      Connected account
+                    </p>
+                  </Link>
+                </li>
+                <li className="ml-3 my-3">
+                  <Link to="/landing-page/setting/menu/notifications">
+                    <p className="text-white font-extralight opacity-40">
+                      Notifications
+                    </p>
+                  </Link>
+                </li>
+                <li className="ml-3 my-3">
+                  <Link to="/landing-page/setting/menu/deactivate-account">
+                    <p className="text-white font-extralight opacity-40">
+                      Deactivate account
+                    </p>
+                  </Link>
+                </li>
+              </ul>
             </li>
-            <li className="flex gap-4 ml-3 my-3">
-              <img src={frame} alt="" srcset="" />
-              <p className="text-white">Contact info</p>
-            </li>
-            <li className="flex gap-4 ml-3 my-3">
-              <img src={emptyWallet} alt="" srcset="" />
-              <p className="text-white">Billing</p>
-            </li>
-            <li className="flex gap-4 ml-3 my-3">
-              <img src={crown} alt="" srcset="" />
-              <p className="text-white">Refferals</p>
-            </li>
-            <li className="flex gap-4 ml-3 my-3">
-              <img src={profileAdd} alt="" srcset="" />
-              <p className="text-white">Invite a friend</p>
-            </li>
+            <Link to="/landing-page/setting/contact-info">
+              <li className="flex gap-4 ml-3 my-3">
+                <img src={frame} alt="" srcset="" />
+                <p className="text-white">Contact info</p>
+              </li>
+            </Link>
+            <Link to="/landing-page/setting/billing">
+              {" "}
+              <li className="flex gap-4 ml-3 my-3">
+                <img src={emptyWallet} alt="" srcset="" />
+                <p className="text-white">Billing</p>
+              </li>
+            </Link>
+            <Link to="/landing-page/setting/refferals">
+              {" "}
+              <li className="flex gap-4 ml-3 my-3">
+                <img src={crown} alt="" srcset="" />
+                <p className="text-white">Refferals</p>
+              </li>
+            </Link>
+            <Link to="/landing-page/setting/invite-a-friend">
+              {" "}
+              <li className="flex gap-4 ml-3 my-3">
+                <img src={profileAdd} alt="" srcset="" />
+                <p className="text-white">Invite a friend</p>
+              </li>
+            </Link>
           </ul>
         </div>
-        <div className="w-[957px] h-[619px] bg-[#1E1F25] border-[#6B6B6B] border-[1px] rounded-lg ">
+        <Outlet />
+        {/* <div className="w-[957px] h-[619px] bg-[#1E1F25] border-[#6B6B6B] border-[1px] rounded-lg ">
           <p className="text-[24px] font-medium text-white m-[24px] leading-[30.24px]">
             Connected Accounts
           </p>
@@ -128,7 +194,7 @@ const SettingPage1 = () => {
           ))}
 
           <></>
-        </div>
+        </div> */}
       </div>
     </div>
   );

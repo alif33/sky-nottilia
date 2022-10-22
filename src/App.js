@@ -14,6 +14,17 @@ import LandingPage from "./Pages/LandingPage/LandingPage";
 import LandingPage1 from "./Pages/LandingPage/LandingPage1";
 import History from "./Pages/LandingPage/History";
 import SettingPage1 from "./Pages/LandingPage/Setting/SettingPage1";
+import ContactInfo from "./Pages/LandingPage/Setting/ContactInfo";
+import Refferals from "./Pages/LandingPage/Setting/Refferals";
+import InviteAFriend from "./Pages/LandingPage/Setting/InviteAFriend";
+import Menu from "./Pages/LandingPage/Setting/Menu/Menu";
+import Billing from "./Pages/LandingPage/Setting/Billing";
+import Overview from "./Pages/LandingPage/Setting/Menu/Overview";
+import SignInMethod from "./Pages/LandingPage/Setting/Menu/SignInMethod";
+import BasicInformation from "./Pages/LandingPage/Setting/Menu/BasicInformation";
+import ConnectedAccount from "./Pages/LandingPage/Setting/Menu/ConnectedAccount";
+import Notifications from "./Pages/LandingPage/Setting/Menu/Notifications";
+import DeactivateAccount from "./Pages/LandingPage/Setting/Menu/DeactivateAccount";
 
 function App() {
   return (
@@ -31,7 +42,30 @@ function App() {
         <Route path="/landing-page" element={<LandingPage />}>
           <Route index element={<LandingPage1 />}></Route>
           <Route path="history" element={<History />}></Route>
-          <Route path="setting" element={<SettingPage1 />}></Route>
+          <Route path="setting" element={<SettingPage1 />}>
+            <Route index element={<Menu />}></Route>
+            <Route path="menu" element={<Menu />}>
+              <Route index element={<Overview />}></Route>
+              <Route path="sign-in-method" element={<SignInMethod />}></Route>
+              <Route
+                path="basic-information"
+                element={<BasicInformation />}
+              ></Route>
+              <Route
+                path="connected-account"
+                element={<ConnectedAccount />}
+              ></Route>
+              <Route path="notifications" element={<Notifications />}></Route>
+              <Route
+                path="deactivate-account"
+                element={<DeactivateAccount />}
+              ></Route>
+            </Route>
+            <Route path="billing" element={<Billing />}></Route>
+            <Route path="contact-info" element={<ContactInfo />}></Route>
+            <Route path="refferals" element={<Refferals />}></Route>
+            <Route path="invite-a-friend" element={<InviteAFriend />}></Route>
+          </Route>
         </Route>
       </Routes>
     </div>
