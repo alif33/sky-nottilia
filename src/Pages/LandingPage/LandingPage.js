@@ -25,6 +25,7 @@ import googleDrive from "../../assets/img/google-drive.png";
 import googlePhotos from "../../assets/img/google-photos.png";
 import Group427320608 from "../../assets/img/Group 427320608.png";
 import DotsThreeVertical from "../../assets/img/DotsThreeVertical.png";
+import NotePencil from "../../assets/img/NotePencil.png";
 
 const LandingPage = () => {
   const handleHistory = () => {
@@ -78,34 +79,77 @@ const LandingPage = () => {
       </div>
       <div className="drawer-side ">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-        <div className="overflow-y-auto w-[111px] bg-[#191919] text-base-content flex flex-col justify-between items-center">
-          <div className="flex flex-col justify-center items-center mt-4">
-            <img src={logo} alt="" srcset="" />
-          </div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <img className="w-[70%]" src={telegram} alt="" srcset="" />
-            <img className="w-[70%]" src={fb} alt="" srcset="" />
-            <img className="w-[70%]" src={twitter} alt="" srcset="" />
-            <img className="w-[70%]" src={slack} alt="" srcset="" />
-            <img className="w-[70%]" src={whatsapp} alt="" srcset="" />
-            <img className="w-[70%]" src={dropbox} alt="" srcset="" />
-            <img className="mt-2 w-[20px]" src={plus} alt="" srcset="" />
-          </div>
-          <div className="flex flex-col justify-end items-center gap-5 pb-[-50px]">
-            <img
-              onClick={handleHistory}
-              className="w-[90%] "
-              src={history}
-              alt=""
-              srcset=""
-            />
-            <img className="w-[90%] " src={message} alt="" srcset="" />
-            <img className="w-[90%] " src={ChartLineUp} alt="" srcset="" />
-            <Link to="/landing-page/setting">
-              <img className="w-[90%] " src={Gear} alt="" srcset="" />
-            </Link>
-            <img className="w-[90%] " src={people} alt="" srcset="" />
-          </div>
+        <div className="overflow-y-auto w-[111px] bg-[#191919] text-base-content flex flex-col justify-between items-center gap-5">
+          <ul className="flex flex-col justify-center items-center mt-4">
+            <li>
+              <img src={logo} alt="" srcset="" />
+            </li>
+          </ul>
+          <ul className="flex flex-col justify-center items-center gap-3">
+            <li>
+              {" "}
+              <img className="w-[70%]" src={telegram} alt="" srcset="" />
+            </li>
+            <li>
+              {" "}
+              <img className="w-[70%]" src={fb} alt="" srcset="" />
+            </li>
+            <li>
+              {" "}
+              <img className="w-[70%]" src={twitter} alt="" srcset="" />
+            </li>
+            <li>
+              {" "}
+              <img className="w-[70%]" src={slack} alt="" srcset="" />
+            </li>
+            <li>
+              {" "}
+              <img className="w-[70%]" src={whatsapp} alt="" srcset="" />
+            </li>
+            <li>
+              {" "}
+              <img className="w-[70%]" src={dropbox} alt="" srcset="" />
+            </li>
+            <li>
+              {" "}
+              <img className="mt-2 w-[70%]" src={plus} alt="" srcset="" />
+            </li>
+          </ul>
+          <ul className="flex flex-col justify-start items-center gap-5 pb-[-50px] ">
+            <li>
+              {" "}
+              <Link to="/landing-page/note-page">
+                <img className="w-[70%] " src={NotePencil} alt="" srcset="" />
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <img
+                onClick={handleHistory}
+                className="w-[70%] "
+                src={history}
+                alt=""
+                srcset=""
+              />
+            </li>
+            <li>
+              <img className="w-[70%] " src={message} alt="" srcset="" />
+            </li>
+            <li>
+              {" "}
+              <Link to="/landing-page/chart-page">
+                <img className="w-[70%] " src={ChartLineUp} alt="" srcset="" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/landing-page/setting">
+                <img className="w-[70%] " src={Gear} alt="" srcset="" />
+              </Link>
+            </li>
+            <li>
+              <img className="w-[70%] " src={people} alt="" srcset="" />
+            </li>
+          </ul>
         </div>
         <ul className="menu  overflow-y-auto w-[111px] bg-[#191919] text-base-content">
           {/* <!-- Sidebar content here --> */}

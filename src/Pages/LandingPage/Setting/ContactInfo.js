@@ -7,7 +7,7 @@ const ContactInfo = () => {
         Contact info
       </p>
       <div>
-        <div className="flex justify-around ">
+        <div className="flex justify-around  text-white focus:outline-none">
           <div>
             <div className="w-[409px] h-[482px] bg-[#151519] rounded-[5px]">
               <div className="flex justify-center">
@@ -17,14 +17,14 @@ const ContactInfo = () => {
                       Email Address
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="email"
                     />
                   </div>
                   <div className="my-2">
                     <p className="text-[#748AA1] font-normal pb-[6px]">Phone</p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white px-3"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] px-3 text-white focus:outline-none"
                       type="tel"
                     />
                   </div>
@@ -33,7 +33,7 @@ const ContactInfo = () => {
                       Facebook
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>
@@ -42,7 +42,7 @@ const ContactInfo = () => {
                       Instagram
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>
@@ -51,7 +51,7 @@ const ContactInfo = () => {
                       Linkedin
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>
@@ -68,7 +68,7 @@ const ContactInfo = () => {
                       Twitter
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>
@@ -77,7 +77,7 @@ const ContactInfo = () => {
                       Dribbble
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>

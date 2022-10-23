@@ -1,8 +1,18 @@
-.card-backgroundImage{
+.card-backgroundImage1{
     background-image: url(../../../assets/img/Bg-blue.png);
   
     background-repeat: no-repeat;
     background-size: cover;
-    height:100%;
-    width: 100%;
+    background-position: center;
+    height: 253px;
+    width: 389px;
+}
+.card-backgroundImage2{
+    background-image: url(../../../assets/img/Bg-green.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 253px;
+    width: 389px;
 }

@@ -68,7 +68,7 @@ const BasicInformation = () => {
                       Full Name
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>
@@ -77,7 +77,7 @@ const BasicInformation = () => {
                       Date of Birth
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white px-3"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] px-3 text-white focus:outline-none"
                       type="date"
                     />
                   </div>
@@ -86,7 +86,7 @@ const BasicInformation = () => {
                       Profession
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>
@@ -105,7 +105,7 @@ const BasicInformation = () => {
                     <p className="text-[#748AA1] font-normal pb-[6px]">
                       Country
                     </p>
-                    <select className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]">
+                    <select className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none">
                       <option value="">Change</option>
                       <option value="">Change</option>
                       <option value="">Change</option>
@@ -119,7 +119,7 @@ const BasicInformation = () => {
                         City
                       </p>
                       <input
-                        className="w-[160px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                        className="w-[160px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                         type="text"
                       />
                     </div>
@@ -128,7 +128,7 @@ const BasicInformation = () => {
                         Zip Code
                       </p>
                       <input
-                        className="w-[160px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                        className="w-[160px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                         type="text"
                       />
                     </div>
@@ -139,7 +139,7 @@ const BasicInformation = () => {
                       Home Address
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>
@@ -148,7 +148,7 @@ const BasicInformation = () => {
                       Office Address
                     </p>
                     <input
-                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px]"
+                      className="w-[349px] h-[51px] border-[#33393F] border-[1px] bg-[#292E33] rounded-[5px] text-white focus:outline-none"
                       type="text"
                     />
                   </div>

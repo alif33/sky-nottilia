@@ -25,6 +25,8 @@ import BasicInformation from "./Pages/LandingPage/Setting/Menu/BasicInformation"
 import ConnectedAccount from "./Pages/LandingPage/Setting/Menu/ConnectedAccount";
 import Notifications from "./Pages/LandingPage/Setting/Menu/Notifications";
 import DeactivateAccount from "./Pages/LandingPage/Setting/Menu/DeactivateAccount";
+import ChartPage from "./Pages/LandingPage/ChartPage/ChartPage";
+import NotePage from "./Pages/LandingPage/NotePage/NotePage";
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
         <Route path="/landing-page" element={<LandingPage />}>
           <Route index element={<LandingPage1 />}></Route>
           <Route path="history" element={<History />}></Route>
+          <Route path="chart-page" element={<ChartPage />}></Route>
+          <Route path="note-page" element={<NotePage />}></Route>
           <Route path="setting" element={<SettingPage1 />}>
             <Route index element={<Menu />}></Route>
             <Route path="menu" element={<Menu />}>
