@@ -132,9 +132,12 @@ const LandingPage = () => {
                 srcset=""
               />
             </li>
-            <li>
-              <img className="w-[70%] " src={message} alt="" srcset="" />
-            </li>
+            <Link to="/landing-page/message">
+              <li>
+                <img className="w-[70%] " src={message} alt="" srcset="" />
+              </li>
+            </Link>
+
             <li>
               {" "}
               <Link to="/landing-page/chart-page">

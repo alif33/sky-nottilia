@@ -27,6 +27,7 @@ import Notifications from "./Pages/LandingPage/Setting/Menu/Notifications";
 import DeactivateAccount from "./Pages/LandingPage/Setting/Menu/DeactivateAccount";
 import ChartPage from "./Pages/LandingPage/ChartPage/ChartPage";
 import NotePage from "./Pages/LandingPage/NotePage/NotePage";
+import Message from "./Pages/LandingPage/Message/Message";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path="history" element={<History />}></Route>
           <Route path="chart-page" element={<ChartPage />}></Route>
           <Route path="note-page" element={<NotePage />}></Route>
+          <Route path="message" element={<Message />}></Route>
           <Route path="setting" element={<SettingPage1 />}>
             <Route index element={<Menu />}></Route>
             <Route path="menu" element={<Menu />}>
