@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import plus from "../../assets/img/plus.png";
-import history from "../../assets/img/ClockCounterClockwise.png";
+import historyImg from "../../assets/img/ClockCounterClockwise.png";
 import ChartLineUp from "../../assets/img/ChartLineUp.png";
 import Gear from "../../assets/img/Gear.png";
 import people from "../../assets/img/Rectangle 1339.png";
@@ -26,10 +26,20 @@ import googlePhotos from "../../assets/img/google-photos.png";
 import Group427320608 from "../../assets/img/Group 427320608.png";
 import DotsThreeVertical from "../../assets/img/DotsThreeVertical.png";
 import NotePencil from "../../assets/img/NotePencil.png";
+import User from "../../assets/img/User.png";
+import SquaresFour from "../../assets/img/SquaresFour.png";
+import History from "./History";
+import AddNewUser from "./AddNewUser";
 
 const LandingPage = () => {
+  const [btnPlus, setBtnPlus] = useState(false);
+  const [history, setHistory] = useState(false);
+  const [addNewUser, setAddNewUser] = useState(false);
   const handleHistory = () => {
     console.log("handleHistory");
+  };
+  const handlePlus = () => {
+    console.log("handlePlus");
   };
   return (
     <div className="drawer drawer-mobile ">
@@ -112,7 +122,9 @@ const LandingPage = () => {
             </li>
             <li>
               {" "}
-              <img className="mt-2 w-[70%]" src={plus} alt="" srcset="" />
+              <button className="" onClick={() => setBtnPlus(!btnPlus)}>
+                <img className="mt-2 w-[70%]" src={plus} alt="" srcset="" />
+              </button>
             </li>
           </ul>
           <ul className="flex flex-col justify-start items-center gap-5 pb-[-50px] ">
@@ -125,9 +137,9 @@ const LandingPage = () => {
             <li>
               {" "}
               <img
-                onClick={handleHistory}
+                onClick={() => setHistory(!history)}
                 className="w-[70%] "
-                src={history}
+                src={historyImg}
                 alt=""
                 srcset=""
               />
@@ -157,6 +169,33 @@ const LandingPage = () => {
         <ul className="menu  overflow-y-auto w-[111px] bg-[#191919] text-base-content">
           {/* <!-- Sidebar content here --> */}
         </ul>
+        {btnPlus && (
+          <>
+            <div
+              onClick={() => setBtnPlus(!btnPlus)}
+              className=" fixed top-0 left-0 w-full h-screen bg-[#11111185] "
+            ></div>
+            <div className="fixed top-[300px] left-[115px]  py-8 px-7  overflow-y-auto  w-[233px] h-[129px] bg-[#191919]">
+              <button
+                className="flex items-center gap-3 "
+                onClick={() => setAddNewUser(!addNewUser)}
+              >
+                <img src={User} alt="" />
+                <p className="text-white font-PlusJakartaSans">Add Account</p>
+              </button>
+              <button className="flex items-center gap-3 mt-[14px]">
+                <img src={SquaresFour} alt="" />
+                <p className="text-white font-PlusJakartaSans">
+                  Add Application
+                </p>
+              </button>
+            </div>
+          </>
+        )}
+        {history && <History history={history} setHistory={setHistory} />}
+        {addNewUser && (
+          <AddNewUser setAddNewUser={setAddNewUser} addNewUser={addNewUser} />
+        )}
       </div>
     </div>
   );
