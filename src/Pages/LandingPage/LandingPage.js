@@ -30,11 +30,13 @@ import User from "../../assets/img/User.png";
 import SquaresFour from "../../assets/img/SquaresFour.png";
 import History from "./History";
 import AddNewUser from "./AddNewUser";
+import AddApplication from "./AddApplication";
 
 const LandingPage = () => {
   const [btnPlus, setBtnPlus] = useState(false);
   const [history, setHistory] = useState(false);
   const [addNewUser, setAddNewUser] = useState(false);
+  const [addApplication, setAddApplication] = useState(false);
   const handleHistory = () => {
     console.log("handleHistory");
   };
@@ -183,7 +185,10 @@ const LandingPage = () => {
                 <img src={User} alt="" />
                 <p className="text-white font-PlusJakartaSans">Add Account</p>
               </button>
-              <button className="flex items-center gap-3 mt-[14px]">
+              <button
+                className="flex items-center gap-3 mt-[14px]"
+                onClick={() => setAddApplication(!addApplication)}
+              >
                 <img src={SquaresFour} alt="" />
                 <p className="text-white font-PlusJakartaSans">
                   Add Application
@@ -195,6 +200,12 @@ const LandingPage = () => {
         {history && <History history={history} setHistory={setHistory} />}
         {addNewUser && (
           <AddNewUser setAddNewUser={setAddNewUser} addNewUser={addNewUser} />
+        )}
+        {addApplication && (
+          <AddApplication
+            setAddApplication={setAddApplication}
+            addApplication={addApplication}
+          />
         )}
       </div>
     </div>

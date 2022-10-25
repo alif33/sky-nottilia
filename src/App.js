@@ -28,6 +28,7 @@ import DeactivateAccount from "./Pages/LandingPage/Setting/Menu/DeactivateAccoun
 import ChartPage from "./Pages/LandingPage/ChartPage/ChartPage";
 import NotePage from "./Pages/LandingPage/NotePage/NotePage";
 import Message from "./Pages/LandingPage/Message/Message";
+import PostScheduler from "./Pages/LandingPage/Post Scheduler/PostScheduler";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path="/landing-page" element={<LandingPage />}>
           <Route index element={<LandingPage1 />}></Route>
           <Route path="history" element={<History />}></Route>
+          <Route path="post-scheduler" element={<PostScheduler />}></Route>
           <Route path="chart-page" element={<ChartPage />}></Route>
           <Route path="note-page" element={<NotePage />}></Route>
           <Route path="message" element={<Message />}></Route>

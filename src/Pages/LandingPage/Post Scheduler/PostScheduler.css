@@ -1,0 +1,9 @@
+.bgImgPostScheduler{
+    background-image: url(../../../assets/img/image75.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 204px;
+    width: 554px;
+}
