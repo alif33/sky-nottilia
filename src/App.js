@@ -29,6 +29,7 @@ import ChartPage from "./Pages/LandingPage/ChartPage/ChartPage";
 import NotePage from "./Pages/LandingPage/NotePage/NotePage";
 import Message from "./Pages/LandingPage/Message/Message";
 import PostScheduler from "./Pages/LandingPage/Post Scheduler/PostScheduler";
+import CreateNewPost from "./Pages/LandingPage/CreateNewPost/CreateNewPost";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route index element={<LandingPage1 />}></Route>
           <Route path="history" element={<History />}></Route>
           <Route path="post-scheduler" element={<PostScheduler />}></Route>
+          <Route path="create-new-post" element={<CreateNewPost />}></Route>
           <Route path="chart-page" element={<ChartPage />}></Route>
           <Route path="note-page" element={<NotePage />}></Route>
           <Route path="message" element={<Message />}></Route>

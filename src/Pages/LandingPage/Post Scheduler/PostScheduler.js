@@ -4,6 +4,7 @@ import notification from "../../../assets/img/Group 34470.png";
 import profileImg from "../../../assets/img/Group 34488.png";
 import rocket from "../../../assets/img/rocket.png";
 import Group48096786 from "../../../assets/img/Group 48096786.png";
+import rocket2 from "../../../assets/img/rocket2.png";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./PostScheduler.css";
@@ -85,7 +86,39 @@ const PostScheduler = () => {
           <div className="mt-10">
             <Calendar onChange={onChange} value={value} />
           </div>
-          <div className="w-[332px] h-[400px] bg-[#1E1F25] rounded-[16px] mt-10 text-white"></div>
+          <div className="w-[332px] h-[400px] bg-[#1E1F25] rounded-[16px] mt-10 text-white">
+            <div className="flex justify-between items-center px-9 pt-6">
+              <p className="text-white font-poppins">Progress bar</p>
+              <IoMdMore className="text-[#333333] w-[24px] h-[24px]" />
+            </div>
+            <div className="flex justify-center items-center mt-12">
+              <img src={rocket2} alt="" srcset="" />
+            </div>
+            <div className="px-10 pb-2 pt-4">
+              <p className="font-poppins text-sm">New Landing Page</p>
+              <progress
+                className="progress progress-warning w-56"
+                value="10"
+                max="100"
+              ></progress>
+            </div>
+            <div className="px-10 py-2">
+              <p className="font-poppins text-sm">Create Animation Apps</p>
+              <progress
+                className="progress progress-info w-56"
+                value="50"
+                max="100"
+              ></progress>
+            </div>
+            <div className="px-10 py-2">
+              <p className="font-poppins text-sm">Website Redesign</p>
+              <progress
+                className="progress progress-primary  w-56"
+                value="70"
+                max="100"
+              ></progress>
+            </div>
+          </div>
         </div>
       </div>
     </div>
