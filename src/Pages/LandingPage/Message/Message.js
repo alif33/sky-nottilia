@@ -31,7 +31,7 @@ import plan from "../../../assets/img/plan.png";
 const Message = () => {
   return (
     <div className="bg-[#131517] max-h-fit pb-[150px]">
-      <div className="flex justify-between items-center mx-3 mb-3  mt-[30px] pl-[52px]">
+      <div className="flex justify-between items-center mx-3 mb-3  pt-6 pl-[52px]">
         <div className="flex items-center justify-center gap-5">
           <img className="w-[19px] h-[19px]" src={list} alt="" />
           <p className="text-white mt-2 font-poppins text-3xl font-bold">

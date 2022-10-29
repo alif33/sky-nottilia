@@ -13,7 +13,7 @@ const PostScheduler = () => {
   const [value, onChange] = useState(new Date());
   return (
     <div className="bg-[#131517] h-max">
-      <div className="flex justify-between items-center mx-3 mb-3  mt-[30px]">
+      <div className="flex justify-between items-center mx-3 mb-3 pt-6 ">
         <div>
           <h1 className="text-white font-bold text-2xl leading-8">
             Post Scheduler

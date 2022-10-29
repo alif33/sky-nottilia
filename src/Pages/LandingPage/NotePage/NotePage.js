@@ -12,7 +12,7 @@ const NotePage = () => {
 
   return (
     <div className="bg-[#131517] h-min pb-[150px] ">
-      <div className="flex justify-between items-center mx-3 mb-3  mt-[30px] pl-[52px]">
+      <div className="flex justify-between items-center mx-3 mb-3  pl-[52px] pt-6">
         <div>
           <h1 className="text-white font-bold text-2xl leading-8 font-PlusJakartaSans">
             My Notes

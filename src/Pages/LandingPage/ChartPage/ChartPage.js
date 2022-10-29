@@ -12,7 +12,7 @@ import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
 const ChartPage = () => {
   return (
     <div className="bg-[#131517] h-max pb-[150px] pl-[52px]">
-      <div className="flex justify-between items-center mx-3 mb-3  mt-[30px]">
+      <div className="flex justify-between items-center mx-3 mb-3 pt-6 ">
         <div>
           <h1 className="text-white font-bold text-2xl leading-8">Hi, Tyler</h1>
           <p className="text-white mt-2">Welcome back, have a nice day!</p>

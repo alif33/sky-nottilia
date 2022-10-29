@@ -40,7 +40,7 @@ const SettingPage1 = () => {
   ];
   return (
     <div className="bg-[#131517] h-max pb-[150px] pl-[52px]">
-      <div className="flex justify-between items-center mx-3 mb-3  mt-[30px]">
+      <div className="flex justify-between items-center mx-3 mb-3 pt-6">
         <div className="w-[426.83px] h-[51.22px] bg-[#1E1F25] text-white flex items-center justify-start rounded-2xl px-2">
           <img src={MagnifyingGlass} alt="" srcset="" />
           <input

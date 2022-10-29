@@ -30,6 +30,7 @@ import NotePage from "./Pages/LandingPage/NotePage/NotePage";
 import Message from "./Pages/LandingPage/Message/Message";
 import PostScheduler from "./Pages/LandingPage/Post Scheduler/PostScheduler";
 import CreateNewPost from "./Pages/LandingPage/CreateNewPost/CreateNewPost";
+import LandingPageTest from "./Pages/LandingPage/LandingPageTest";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
         <Route path="/startup-screen2" element={<StartupScreen2 />} />
         <Route path="/startup-screen3" element={<StartupScreen3 />} />
         <Route path="/startup-screen4" element={<StartupScreen4 />} />
+        <Route path="/landing-page-test" element={<LandingPageTest />} />
+
         <Route path="/landing-page" element={<LandingPage />}>
           <Route index element={<LandingPage1 />}></Route>
           <Route path="history" element={<History />}></Route>
