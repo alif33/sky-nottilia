@@ -11,6 +11,11 @@ import verify from "../../../assets/img/verify.png";
 import gallery from "../../../assets/img/gallery.png";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
+import Crown from "../../../assets/img/SvgIcon/Crown";
+import MenuSvg from "../../../assets/img/SvgIcon/MenuSvg";
+import FrameSvg from "../../../assets/img/SvgIcon/Frame";
+import EmptyWallet from "../../../assets/img/SvgIcon/EmptyWallet";
+import ProfileAdd from "../../../assets/img/SvgIcon/ProfileAdd";
 const SettingPage1 = () => {
   const accountApps = [
     {
@@ -40,13 +45,38 @@ const SettingPage1 = () => {
     },
   ];
   const [menuItems, setMenuItems] = useState(false);
+  console.log("menuItems menuItems", menuItems);
   const location = useLocation();
 
   console.log("hash", location.hash);
   console.log("pathname", location.pathname);
   console.log("search", location.search);
+  let colorsPick;
+  if (location.pathname === "/landing-page/setting") {
+    colorsPick = "#7C5CFC";
+  } else if (location.pathname === "/landing-page/setting/menu") {
+    colorsPick = "#7C5CFC";
+  } else if (
+    location.pathname === "/landing-page/setting/menu/basic-information"
+  ) {
+    colorsPick = "#7C5CFC";
+  } else if (
+    location.pathname === "/landing-page/setting/menu/connected-account"
+  ) {
+    colorsPick = "#7C5CFC";
+  } else if (location.pathname === "/landing-page/setting/menu/notifications") {
+    colorsPick = "#7C5CFC";
+  } else if (
+    location.pathname === "/landing-page/setting/menu/deactivate-account"
+  ) {
+    colorsPick = "#7C5CFC";
+  } else if (
+    location.pathname === "/landing-page/setting/menu/sign-in-method"
+  ) {
+    colorsPick = "#7C5CFC";
+  } else colorsPick = "#ffff";
   return (
-    <div className="bg-[#131517] h-max pb-[150px] pl-[52px]">
+    <div className="bg-[#131517] h-screen pb-[150px] pl-[52px]">
       <div className="flex justify-between items-center mx-3 mb-3 pt-6">
         <div className="w-[426.83px] h-[51.22px] bg-[#1E1F25] text-white flex items-center justify-start rounded-2xl px-2">
           <img src={MagnifyingGlass} alt="" srcset="" />
@@ -76,8 +106,39 @@ const SettingPage1 = () => {
               <Link to="/landing-page/setting">
                 {" "}
                 <div className="flex gap-4">
-                  <img src={menu} alt="" srcset="" />
+                  {/* <img src={menu} alt="" srcset="" /> */}
+                  <MenuSvg color={colorsPick} />
+                  {/*  ${
+                      location.pathname === "/landing-page/setting/menu"
+                        ? `#7C5CFC`
+                        : `#ffff`
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/basic-information"
+                        ? `#7C5CFC`
+                        : `#ffff`
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/connected-account"
+                        ? `#7C5CFC`
+                        : `#ffff`
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/notifications"
+                        ? `#7C5CFC`
+                        : `#ffff`
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/deactivate-account"
+                        ? `#7C5CFC`
+                        : `#ffff`
+                    } */}
                   <p
+                    onClick={() => setMenuItems(!menuItems)}
                     className={` ${
                       location.pathname === "/landing-page/setting"
                         ? "text-[#7C5CFC]"
@@ -85,6 +146,12 @@ const SettingPage1 = () => {
                     }
                     ${
                       location.pathname === "/landing-page/setting/menu"
+                        ? "text-[#7C5CFC]"
+                        : "text-white "
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/sign-in-method"
                         ? "text-[#7C5CFC]"
                         : "text-white "
                     }
@@ -118,98 +185,106 @@ const SettingPage1 = () => {
                 </div>
               </Link>
 
-              <ul>
-                <li className=" ml-3 my-3">
-                  <Link to="/landing-page/setting/menu">
-                    <p
-                      className={`font-extralight  ${
-                        location.pathname === "/landing-page/setting/menu"
-                          ? "text-[#7C5CFC]"
-                          : "text-white opacity-40"
-                      }`}
+              {menuItems && (
+                <ul className="">
+                  <li className=" ml-3 my-3">
+                    <Link to="/landing-page/setting/menu">
+                      <p
+                        className={`font-extralight  ${
+                          location.pathname === "/landing-page/setting/menu"
+                            ? "text-[#7C5CFC]"
+                            : "text-white opacity-40"
+                        }`}
+                      >
+                        Overview
+                      </p>
+                    </Link>
+                  </li>
+                  <li className=" ml-3 my-3">
+                    <Link
+                      className=""
+                      to="/landing-page/setting/menu/sign-in-method"
                     >
-                      Overview
-                    </p>
-                  </Link>
-                </li>
-                <li className=" ml-3 my-3">
-                  <Link
-                    className=""
-                    to="/landing-page/setting/menu/sign-in-method"
-                  >
-                    <p
-                      className={`font-extralight  ${
-                        location.pathname ===
-                        "/landing-page/setting/menu/sign-in-method"
-                          ? "text-[#7C5CFC]"
-                          : "text-white opacity-40"
-                      }`}
-                    >
-                      Sign in method
-                    </p>
-                  </Link>
-                </li>
-                <li className="ml-3 my-3">
-                  <Link to="/landing-page/setting/menu/basic-information">
-                    <p
-                      className={`font-extralight  ${
-                        location.pathname ===
-                        "/landing-page/setting/menu/basic-information"
-                          ? "text-[#7C5CFC]"
-                          : "text-white opacity-40"
-                      }`}
-                    >
-                      Basic Information
-                    </p>
-                  </Link>
-                </li>
-                <li className="ml-3 my-3">
-                  <Link to="/landing-page/setting/menu/connected-account">
-                    <p
-                      className={`font-extralight  ${
-                        location.pathname ===
-                        "/landing-page/setting/menu/connected-account"
-                          ? "text-[#7C5CFC]"
-                          : "text-white opacity-40"
-                      }`}
-                    >
-                      Connected account
-                    </p>
-                  </Link>
-                </li>
-                <li className="ml-3 my-3">
-                  <Link to="/landing-page/setting/menu/notifications">
-                    <p
-                      className={`font-extralight  ${
-                        location.pathname ===
-                        "/landing-page/setting/menu/notifications"
-                          ? "text-[#7C5CFC]"
-                          : "text-white opacity-40"
-                      }`}
-                    >
-                      Notifications
-                    </p>
-                  </Link>
-                </li>
-                <li className="ml-3 my-3">
-                  <Link to="/landing-page/setting/menu/deactivate-account">
-                    <p
-                      className={`font-extralight  ${
-                        location.pathname ===
-                        "/landing-page/setting/menu/deactivate-account"
-                          ? "text-[#7C5CFC]"
-                          : "text-white opacity-40"
-                      }`}
-                    >
-                      Deactivate account
-                    </p>
-                  </Link>
-                </li>
-              </ul>
+                      <p
+                        className={`font-extralight  ${
+                          location.pathname ===
+                          "/landing-page/setting/menu/sign-in-method"
+                            ? "text-[#7C5CFC]"
+                            : "text-white opacity-40"
+                        }`}
+                      >
+                        Sign in method
+                      </p>
+                    </Link>
+                  </li>
+                  <li className="ml-3 my-3">
+                    <Link to="/landing-page/setting/menu/basic-information">
+                      <p
+                        className={`font-extralight  ${
+                          location.pathname ===
+                          "/landing-page/setting/menu/basic-information"
+                            ? "text-[#7C5CFC]"
+                            : "text-white opacity-40"
+                        }`}
+                      >
+                        Basic Information
+                      </p>
+                    </Link>
+                  </li>
+                  <li className="ml-3 my-3">
+                    <Link to="/landing-page/setting/menu/connected-account">
+                      <p
+                        className={`font-extralight  ${
+                          location.pathname ===
+                          "/landing-page/setting/menu/connected-account"
+                            ? "text-[#7C5CFC]"
+                            : "text-white opacity-40"
+                        }`}
+                      >
+                        Connected account
+                      </p>
+                    </Link>
+                  </li>
+                  <li className="ml-3 my-3">
+                    <Link to="/landing-page/setting/menu/notifications">
+                      <p
+                        className={`font-extralight  ${
+                          location.pathname ===
+                          "/landing-page/setting/menu/notifications"
+                            ? "text-[#7C5CFC]"
+                            : "text-white opacity-40"
+                        }`}
+                      >
+                        Notifications
+                      </p>
+                    </Link>
+                  </li>
+                  <li className="ml-3 my-3">
+                    <Link to="/landing-page/setting/menu/deactivate-account">
+                      <p
+                        className={`font-extralight  ${
+                          location.pathname ===
+                          "/landing-page/setting/menu/deactivate-account"
+                            ? "text-[#7C5CFC]"
+                            : "text-white opacity-40"
+                        }`}
+                      >
+                        Deactivate account
+                      </p>
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
             <Link to="/landing-page/setting/contact-info">
               <li className="flex gap-4 ml-3 my-3">
-                <img src={frame} alt="" srcset="" />
+                <FrameSvg
+                  color={
+                    location.pathname === "/landing-page/setting/contact-info"
+                      ? `#7C5CFC`
+                      : `#ffff`
+                  }
+                />
                 <p
                   className={`font-extralight  ${
                     location.pathname === "/landing-page/setting/contact-info"
@@ -224,7 +299,13 @@ const SettingPage1 = () => {
             <Link to="/landing-page/setting/billing">
               {" "}
               <li className="flex gap-4 ml-3 my-3">
-                <img src={emptyWallet} alt="" srcset="" />
+                <EmptyWallet
+                  color={
+                    location.pathname === "/landing-page/setting/billing"
+                      ? `#7C5CFC`
+                      : `#ffff`
+                  }
+                />
                 <p
                   className={`font-extralight  ${
                     location.pathname === "/landing-page/setting/billing"
@@ -239,7 +320,13 @@ const SettingPage1 = () => {
             <Link to="/landing-page/setting/refferals">
               {" "}
               <li className="flex gap-4 ml-3 my-3">
-                <img src={crown} alt="" srcset="" />
+                <Crown
+                  color={
+                    location.pathname === "/landing-page/setting/refferals"
+                      ? `#7C5CFC`
+                      : `#ffff`
+                  }
+                />
                 <p
                   className={`font-extralight  ${
                     location.pathname === "/landing-page/setting/refferals"
@@ -254,9 +341,14 @@ const SettingPage1 = () => {
             <Link to="/landing-page/setting/invite-a-friend">
               {" "}
               <li className="flex gap-4 ml-3 my-3">
-                <p>
-                  <img src={profileAdd} alt="" srcset="" />
-                </p>
+                <ProfileAdd
+                  color={
+                    location.pathname ===
+                    "/landing-page/setting/invite-a-friend"
+                      ? `#7C5CFC`
+                      : `#ffff`
+                  }
+                />
                 <p
                   className={`font-extralight  ${
                     location.pathname ===
