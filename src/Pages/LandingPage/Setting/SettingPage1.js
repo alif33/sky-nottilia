@@ -9,7 +9,8 @@ import profileAdd from "../../../assets/img/profile-add.svg";
 import emptyWallet from "../../../assets/img/empty-wallet.svg";
 import verify from "../../../assets/img/verify.png";
 import gallery from "../../../assets/img/gallery.png";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { useState } from "react";
 const SettingPage1 = () => {
   const accountApps = [
     {
@@ -38,6 +39,12 @@ const SettingPage1 = () => {
       img: gallery,
     },
   ];
+  const [menuItems, setMenuItems] = useState(false);
+  const location = useLocation();
+
+  console.log("hash", location.hash);
+  console.log("pathname", location.pathname);
+  console.log("search", location.search);
   return (
     <div className="bg-[#131517] h-max pb-[150px] pl-[52px]">
       <div className="flex justify-between items-center mx-3 mb-3 pt-6">
@@ -65,19 +72,62 @@ const SettingPage1 = () => {
       <div className="flex">
         <div className="w-[290px]">
           <ul>
-            <li className=" ml-3 my-3">
+            <li className=" ml-3 my-3 ">
               <Link to="/landing-page/setting">
                 {" "}
                 <div className="flex gap-4">
                   <img src={menu} alt="" srcset="" />
-                  <p className="text-white">Menu</p>
+                  <p
+                    className={` ${
+                      location.pathname === "/landing-page/setting"
+                        ? "text-[#7C5CFC]"
+                        : "text-white "
+                    }
+                    ${
+                      location.pathname === "/landing-page/setting/menu"
+                        ? "text-[#7C5CFC]"
+                        : "text-white "
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/basic-information"
+                        ? "text-[#7C5CFC]"
+                        : "text-white "
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/connected-account"
+                        ? "text-[#7C5CFC]"
+                        : "text-white "
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/notifications"
+                        ? "text-[#7C5CFC]"
+                        : "text-white "
+                    }
+                    ${
+                      location.pathname ===
+                      "/landing-page/setting/menu/deactivate-account"
+                        ? "text-[#7C5CFC]"
+                        : "text-white "
+                    }`}
+                  >
+                    Menu
+                  </p>
                 </div>
               </Link>
 
               <ul>
                 <li className=" ml-3 my-3">
                   <Link to="/landing-page/setting/menu">
-                    <p className="text-white font-extralight opacity-40">
+                    <p
+                      className={`font-extralight  ${
+                        location.pathname === "/landing-page/setting/menu"
+                          ? "text-[#7C5CFC]"
+                          : "text-white opacity-40"
+                      }`}
+                    >
                       Overview
                     </p>
                   </Link>
@@ -87,35 +137,70 @@ const SettingPage1 = () => {
                     className=""
                     to="/landing-page/setting/menu/sign-in-method"
                   >
-                    <p className="text-white font-extralight opacity-40">
+                    <p
+                      className={`font-extralight  ${
+                        location.pathname ===
+                        "/landing-page/setting/menu/sign-in-method"
+                          ? "text-[#7C5CFC]"
+                          : "text-white opacity-40"
+                      }`}
+                    >
                       Sign in method
                     </p>
                   </Link>
                 </li>
                 <li className="ml-3 my-3">
                   <Link to="/landing-page/setting/menu/basic-information">
-                    <p className="text-white font-extralight opacity-40">
+                    <p
+                      className={`font-extralight  ${
+                        location.pathname ===
+                        "/landing-page/setting/menu/basic-information"
+                          ? "text-[#7C5CFC]"
+                          : "text-white opacity-40"
+                      }`}
+                    >
                       Basic Information
                     </p>
                   </Link>
                 </li>
                 <li className="ml-3 my-3">
                   <Link to="/landing-page/setting/menu/connected-account">
-                    <p className="text-white font-extralight opacity-40">
+                    <p
+                      className={`font-extralight  ${
+                        location.pathname ===
+                        "/landing-page/setting/menu/connected-account"
+                          ? "text-[#7C5CFC]"
+                          : "text-white opacity-40"
+                      }`}
+                    >
                       Connected account
                     </p>
                   </Link>
                 </li>
                 <li className="ml-3 my-3">
                   <Link to="/landing-page/setting/menu/notifications">
-                    <p className="text-white font-extralight opacity-40">
+                    <p
+                      className={`font-extralight  ${
+                        location.pathname ===
+                        "/landing-page/setting/menu/notifications"
+                          ? "text-[#7C5CFC]"
+                          : "text-white opacity-40"
+                      }`}
+                    >
                       Notifications
                     </p>
                   </Link>
                 </li>
                 <li className="ml-3 my-3">
                   <Link to="/landing-page/setting/menu/deactivate-account">
-                    <p className="text-white font-extralight opacity-40">
+                    <p
+                      className={`font-extralight  ${
+                        location.pathname ===
+                        "/landing-page/setting/menu/deactivate-account"
+                          ? "text-[#7C5CFC]"
+                          : "text-white opacity-40"
+                      }`}
+                    >
                       Deactivate account
                     </p>
                   </Link>
@@ -125,28 +210,63 @@ const SettingPage1 = () => {
             <Link to="/landing-page/setting/contact-info">
               <li className="flex gap-4 ml-3 my-3">
                 <img src={frame} alt="" srcset="" />
-                <p className="text-white">Contact info</p>
+                <p
+                  className={`font-extralight  ${
+                    location.pathname === "/landing-page/setting/contact-info"
+                      ? "text-[#7C5CFC]"
+                      : "text-white"
+                  }`}
+                >
+                  Contact info
+                </p>
               </li>
             </Link>
             <Link to="/landing-page/setting/billing">
               {" "}
               <li className="flex gap-4 ml-3 my-3">
                 <img src={emptyWallet} alt="" srcset="" />
-                <p className="text-white">Billing</p>
+                <p
+                  className={`font-extralight  ${
+                    location.pathname === "/landing-page/setting/billing"
+                      ? "text-[#7C5CFC]"
+                      : "text-white"
+                  }`}
+                >
+                  Billing
+                </p>
               </li>
             </Link>
             <Link to="/landing-page/setting/refferals">
               {" "}
               <li className="flex gap-4 ml-3 my-3">
                 <img src={crown} alt="" srcset="" />
-                <p className="text-white">Refferals</p>
+                <p
+                  className={`font-extralight  ${
+                    location.pathname === "/landing-page/setting/refferals"
+                      ? "text-[#7C5CFC]"
+                      : "text-white"
+                  }`}
+                >
+                  Refferals
+                </p>
               </li>
             </Link>
             <Link to="/landing-page/setting/invite-a-friend">
               {" "}
               <li className="flex gap-4 ml-3 my-3">
-                <img src={profileAdd} alt="" srcset="" />
-                <p className="text-white">Invite a friend</p>
+                <p>
+                  <img src={profileAdd} alt="" srcset="" />
+                </p>
+                <p
+                  className={`font-extralight  ${
+                    location.pathname ===
+                    "/landing-page/setting/invite-a-friend"
+                      ? "text-[#7C5CFC]"
+                      : "text-white"
+                  }`}
+                >
+                  Invite a friend
+                </p>
               </li>
             </Link>
           </ul>

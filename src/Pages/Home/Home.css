@@ -3,6 +3,23 @@
   
     background-repeat: no-repeat;
     background-size: cover;
-    height:1018.5px;
-    width: 100%;
+    background-position: center;
+    /* height: max-content; */
+    /* width: 100%; */
+}
+.backgroundImgSubscribe{
+    background-image: url(../../assets/img/Base1.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.backgroundImgFaq{
+    background-image: url(../../assets/img/Base.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: max-content;
+    
 }

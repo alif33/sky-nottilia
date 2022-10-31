@@ -5,8 +5,8 @@ const Subscribe = () => {
   return (
     <div className="flex justify-center">
       <div
-        className="lg:w-[1140px] w-[350px] h-[347px] my-11 bg-auto bg-no-repeat bg-center"
-        style={{ background: `url(${BackgroundImg})` }}
+        className="lg:w-[1140px] w-[350px] h-[347px] my-11 backgroundImgSubscribe pb-10 rounded-3xl"
+        // style={{ background: `url(${BackgroundImg})` }}
       >
         <div
           className="

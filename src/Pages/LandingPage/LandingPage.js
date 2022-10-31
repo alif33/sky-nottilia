@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import plus from "../../assets/img/plus.png";
 import historyImg from "../../assets/img/ClockCounterClockwise.png";
@@ -43,8 +43,12 @@ const LandingPage = () => {
   const handlePlus = () => {
     console.log("handlePlus");
   };
+  const location = useLocation();
+
+  console.log("hash", location.hash);
+  console.log("pathname", location.pathname);
+  console.log("search", location.search);
   return (
-    
     <div>
       <div class="flex h-screen overflow-y-auto">
         {/* <!-- Sidebar --> */}
@@ -54,9 +58,11 @@ const LandingPage = () => {
           {/* <!-- Sidebar links --> */}
           <nav class="flex-1 overflow-y-auto flex flex-col justify-between items-center ">
             <ul className="flex flex-col justify-center items-center mt-4">
-              <li>
-                <img src={logo} alt="" srcset="" />
-              </li>
+              <Link to="/landing-page">
+                <li>
+                  <img src={logo} alt="" srcset="" />
+                </li>
+              </Link>
             </ul>
             <ul className="flex flex-col justify-center items-center gap-3">
               <li>
@@ -90,14 +96,27 @@ const LandingPage = () => {
                 </button>
               </li>
             </ul>
-            <ul className="flex flex-col justify-start items-center gap-5  ">
-              <li>
+            <ul className="flex flex-col justify-start items-center">
+              <li
+                className={`w-[111px] h-[60px] flex justify-center items-center ${
+                  location.pathname === "/landing-page/note-page"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-none"
+                } `}
+              >
                 {" "}
-                <Link to="/landing-page/note-page">
-                  <img className="w-[70%] " src={NotePencil} alt="" srcset="" />
-                </Link>
+                <div>
+                  <Link to="/landing-page/note-page">
+                    <img
+                      className="w-[70%]"
+                      src={NotePencil}
+                      alt=""
+                      srcset=""
+                    />
+                  </Link>
+                </div>
               </li>
-              <li>
+              <li className="py-2">
                 {" "}
                 <img
                   onClick={() => setHistory(!history)}
@@ -107,13 +126,25 @@ const LandingPage = () => {
                   srcset=""
                 />
               </li>
-              <Link to="/landing-page/message">
-                <li>
+              <li
+                className={`w-[111px] h-[60px] flex justify-center items-center ${
+                  location.pathname === "/landing-page/message"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-none"
+                } `}
+              >
+                <Link to="/landing-page/message">
                   <img className="w-[70%] " src={message} alt="" srcset="" />
-                </li>
-              </Link>
+                </Link>
+              </li>
 
-              <li>
+              <li
+                className={`w-[111px] h-[60px] flex justify-center items-center ${
+                  location.pathname === "/landing-page/chart-page"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-none"
+                } `}
+              >
                 {" "}
                 <Link to="/landing-page/chart-page">
                   <img
@@ -124,7 +155,73 @@ const LandingPage = () => {
                   />
                 </Link>
               </li>
-              <li>
+              <li
+                className={`w-[111px] h-[60px] flex justify-center items-center ${
+                  location.pathname === "/landing-page/setting"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                } ${
+                  location.pathname === "/landing-page/setting/menu"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname ===
+                  "/landing-page/setting/menu/sign-in-method"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname ===
+                  "/landing-page/setting/menu/basic-information"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname ===
+                  "/landing-page/setting/menu/connected-account"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname ===
+                  "/landing-page/setting/menu/deactivate-account"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname ===
+                  "/landing-page/setting/menu/notifications"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname === "/landing-page/setting/contact-info"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname === "/landing-page/setting/billing"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname === "/landing-page/setting/billing"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname === "/landing-page/setting/refferals"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                ${
+                  location.pathname === "/landing-page/setting/invite-a-friend"
+                    ? "border-l-[#7C5CFC] border-l-[10px] bg-[#0C0C0C]"
+                    : "bg-none border-transparent"
+                }
+                `}
+              >
                 <Link to="/landing-page/setting">
                   <img className="w-[70%] " src={Gear} alt="" srcset="" />
                 </Link>

@@ -2,11 +2,11 @@ import React from "react";
 import BackgroundImg from "../../assets/img/Base.png";
 const Faq = () => {
   return (
-    <div className="flex justify-center items-center mx-2 rounded-lg">
+    <div className="flex justify-center items-center mx-2 ">
       <div
         className="h-[827px] w-[1440px]
-        bg-auto bg-no-repeat bg-center"
-        style={{ background: `url(${BackgroundImg})` }}
+        backgroundImgFaq pb-10 rounded-3xl"
+        // style={{ background: `url(${BackgroundImg})` }}
       >
         <h2 className="lg:text-5xl text-xl font-bold text-center lg:pt-[100px] py-4 text-white">
           Frequently Asked Questions
